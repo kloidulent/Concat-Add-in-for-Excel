@@ -62,7 +62,12 @@ namespace Concat_Addin
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.ToString()}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
+               // don't need to display a message as it's quite possible that the range textbox currently contains an invalid address e.g.
+               // if the user is in the middle of entering an address and has not yet completed it.
+
+                // TODO - an indicator on the textbox or near it to show whether the range entered is valid
+
 
                 SelectionIsValid = false;
 
@@ -213,10 +218,7 @@ namespace Concat_Addin
             PopulateOutputText();
         }
 
-        private void frmConcat_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnCopy_Click(object sender, EventArgs e)
         {
@@ -229,10 +231,7 @@ namespace Concat_Addin
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void chkCRAfterEachItem_CheckedChanged(object sender, EventArgs e)
         {
@@ -240,6 +239,11 @@ namespace Concat_Addin
         }
 
         private void chkDistinctValues_CheckedChanged(object sender, EventArgs e)
+        {
+            PopulateOutputText();
+        }
+
+        private void txtSelectedAddress_TextChanged(object sender, EventArgs e)
         {
             PopulateOutputText();
         }

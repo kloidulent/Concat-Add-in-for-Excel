@@ -167,7 +167,6 @@
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Delimiter";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // chkAddCharacter
             // 
@@ -216,6 +215,7 @@
             this.txtSelectedAddress.Name = "txtSelectedAddress";
             this.txtSelectedAddress.Size = new System.Drawing.Size(148, 20);
             this.txtSelectedAddress.TabIndex = 0;
+            this.txtSelectedAddress.TextChanged += new System.EventHandler(this.txtSelectedAddress_TextChanged);
             // 
             // btnCancel
             // 
@@ -273,7 +273,6 @@
             this.Name = "frmConcat";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Concatenate Text";
-            this.Load += new System.EventHandler(this.frmConcat_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
