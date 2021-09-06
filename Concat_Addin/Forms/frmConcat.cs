@@ -117,8 +117,8 @@ namespace Concat_Addin
 
                     for (int column = cells.GetLowerBound(1); column <= cells.GetUpperBound(1); column++)
                         for (int row = cells.GetLowerBound(0); row <= cells.GetUpperBound(0); row++)
-                            if (cells[row,column]!=null)
-                                cellValues.Add(cells[row, column].ToString()) ;
+                            if (cells[row, column] != null)
+                                cellValues.Add(cells[row, column].ToString());
 
                 IEnumerable<string> itemsToProcess;
 
@@ -132,24 +132,37 @@ namespace Concat_Addin
                 }
 
 
-                foreach (string s in itemsToProcess)
-                    sbOutput.Append(wrapChar + s + wrapChar + delimChar + carriageReturnChar);
+                // it's possible that there are no items to process - this would happen if the cells in the selection are null
+
+                if (itemsToProcess.Count() > 0)
+                {
+
+                    foreach (string s in itemsToProcess)
+                        sbOutput.Append(wrapChar + s + wrapChar + delimChar + carriageReturnChar);
 
 
-                // remove the trailing comma - https://stackoverflow.com/questions/17215045/best-way-to-remove-the-last-character-from-a-string-built-with-stringbuilder/17215107
+                    // remove the trailing comma - https://stackoverflow.com/questions/17215045/best-way-to-remove-the-last-character-from-a-string-built-with-stringbuilder/17215107
 
-                sbOutput.Length = sbOutput.Length - delimChar.Length - carriageReturnChar.Length;
-
-
-                if (radioTextTransformNone.Checked)
-                    richTextResults.Text = sbOutput.ToString();
-                else if (radioTextTransformToLower.Checked)
-                    richTextResults.Text = sbOutput.ToString().ToLower();
-                else if (radioTextTransformToUpper.Checked)
-                    richTextResults.Text = sbOutput.ToString().ToUpper();
+                    sbOutput.Length = sbOutput.Length - delimChar.Length - carriageReturnChar.Length;
 
 
-                lblMessage.Text = itemsToProcess.Count().ToString() + " values in list";
+                    if (radioTextTransformNone.Checked)
+                        richTextResults.Text = sbOutput.ToString();
+                    else if (radioTextTransformToLower.Checked)
+                        richTextResults.Text = sbOutput.ToString().ToLower();
+                    else if (radioTextTransformToUpper.Checked)
+                        richTextResults.Text = sbOutput.ToString().ToUpper();
+
+                }
+
+
+                if (itemsToProcess.Count()==1)
+                    lblMessage.Text = itemsToProcess.Count().ToString() + " value in list";
+                else
+                    lblMessage.Text = itemsToProcess.Count().ToString() + " values in list";
+
+
+
 
 
             }
@@ -164,7 +177,7 @@ namespace Concat_Addin
 
             string address = Utilities.PromptForExcelRange(txtSelectedAddress.Text);
 
-            if (address.Length>0)
+            if (address.Length > 0)
             {
                 txtSelectedAddress.Text = address;
                 PopulateOutputText();

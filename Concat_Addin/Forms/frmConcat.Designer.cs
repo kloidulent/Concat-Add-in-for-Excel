@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.chkDistinctValues = new System.Windows.Forms.CheckBox();
             this.chkCRAfterEachItem = new System.Windows.Forms.CheckBox();
             this.richTextResults = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,13 +49,13 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.chkDistinctValues = new System.Windows.Forms.CheckBox();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lblMessage);
             this.groupBox1.Controls.Add(this.chkDistinctValues);
             this.groupBox1.Controls.Add(this.chkCRAfterEachItem);
@@ -70,17 +72,36 @@
             this.groupBox1.Controls.Add(this.txtCharacter);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtSelectedAddress);
-            this.groupBox1.Location = new System.Drawing.Point(31, 21);
+            this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(416, 428);
+            this.groupBox1.Size = new System.Drawing.Size(397, 428);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(27, 397);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 17;
+            // 
+            // chkDistinctValues
+            // 
+            this.chkDistinctValues.AutoSize = true;
+            this.chkDistinctValues.Location = new System.Drawing.Point(151, 96);
+            this.chkDistinctValues.Name = "chkDistinctValues";
+            this.chkDistinctValues.Size = new System.Drawing.Size(96, 17);
+            this.chkDistinctValues.TabIndex = 16;
+            this.chkDistinctValues.Text = "Distinct Values";
+            this.chkDistinctValues.UseVisualStyleBackColor = true;
+            this.chkDistinctValues.CheckedChanged += new System.EventHandler(this.chkDistinctValues_CheckedChanged);
+            // 
             // chkCRAfterEachItem
             // 
             this.chkCRAfterEachItem.AutoSize = true;
-            this.chkCRAfterEachItem.Location = new System.Drawing.Point(39, 98);
+            this.chkCRAfterEachItem.Location = new System.Drawing.Point(25, 96);
             this.chkCRAfterEachItem.Name = "chkCRAfterEachItem";
             this.chkCRAfterEachItem.Size = new System.Drawing.Size(120, 17);
             this.chkCRAfterEachItem.TabIndex = 15;
@@ -90,7 +111,7 @@
             // 
             // richTextResults
             // 
-            this.richTextResults.Location = new System.Drawing.Point(39, 194);
+            this.richTextResults.Location = new System.Drawing.Point(27, 192);
             this.richTextResults.Name = "richTextResults";
             this.richTextResults.Size = new System.Drawing.Size(342, 197);
             this.richTextResults.TabIndex = 14;
@@ -99,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 134);
+            this.label4.Location = new System.Drawing.Point(22, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 13);
             this.label4.TabIndex = 13;
@@ -108,7 +129,7 @@
             // radioTextTransformToLower
             // 
             this.radioTextTransformToLower.AutoSize = true;
-            this.radioTextTransformToLower.Location = new System.Drawing.Point(300, 134);
+            this.radioTextTransformToLower.Location = new System.Drawing.Point(286, 132);
             this.radioTextTransformToLower.Name = "radioTextTransformToLower";
             this.radioTextTransformToLower.Size = new System.Drawing.Size(81, 17);
             this.radioTextTransformToLower.TabIndex = 12;
@@ -119,7 +140,7 @@
             // radioTextTransformToUpper
             // 
             this.radioTextTransformToUpper.AutoSize = true;
-            this.radioTextTransformToUpper.Location = new System.Drawing.Point(211, 134);
+            this.radioTextTransformToUpper.Location = new System.Drawing.Point(197, 132);
             this.radioTextTransformToUpper.Name = "radioTextTransformToUpper";
             this.radioTextTransformToUpper.Size = new System.Drawing.Size(81, 17);
             this.radioTextTransformToUpper.TabIndex = 11;
@@ -131,7 +152,7 @@
             // 
             this.radioTextTransformNone.AutoSize = true;
             this.radioTextTransformNone.Checked = true;
-            this.radioTextTransformNone.Location = new System.Drawing.Point(152, 134);
+            this.radioTextTransformNone.Location = new System.Drawing.Point(138, 132);
             this.radioTextTransformNone.Name = "radioTextTransformNone";
             this.radioTextTransformNone.Size = new System.Drawing.Size(51, 17);
             this.radioTextTransformNone.TabIndex = 10;
@@ -142,7 +163,7 @@
             // 
             // btnSelectRange
             // 
-            this.btnSelectRange.Location = new System.Drawing.Point(306, 28);
+            this.btnSelectRange.Location = new System.Drawing.Point(292, 26);
             this.btnSelectRange.Name = "btnSelectRange";
             this.btnSelectRange.Size = new System.Drawing.Size(27, 23);
             this.btnSelectRange.TabIndex = 9;
@@ -152,7 +173,7 @@
             // 
             // txtDelimiter
             // 
-            this.txtDelimiter.Location = new System.Drawing.Point(279, 60);
+            this.txtDelimiter.Location = new System.Drawing.Point(265, 58);
             this.txtDelimiter.Name = "txtDelimiter";
             this.txtDelimiter.Size = new System.Drawing.Size(56, 20);
             this.txtDelimiter.TabIndex = 8;
@@ -162,7 +183,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(226, 63);
+            this.label2.Location = new System.Drawing.Point(212, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 7;
@@ -174,7 +195,7 @@
             this.chkAddCharacter.AutoSize = true;
             this.chkAddCharacter.Checked = true;
             this.chkAddCharacter.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAddCharacter.Location = new System.Drawing.Point(39, 63);
+            this.chkAddCharacter.Location = new System.Drawing.Point(25, 61);
             this.chkAddCharacter.Name = "chkAddCharacter";
             this.chkAddCharacter.Size = new System.Drawing.Size(107, 17);
             this.chkAddCharacter.TabIndex = 6;
@@ -185,7 +206,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 178);
+            this.label3.Location = new System.Drawing.Point(22, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 5;
@@ -193,7 +214,7 @@
             // 
             // txtCharacter
             // 
-            this.txtCharacter.Location = new System.Drawing.Point(152, 60);
+            this.txtCharacter.Location = new System.Drawing.Point(138, 58);
             this.txtCharacter.MaxLength = 1;
             this.txtCharacter.Name = "txtCharacter";
             this.txtCharacter.Size = new System.Drawing.Size(56, 20);
@@ -204,7 +225,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 33);
+            this.label1.Location = new System.Drawing.Point(22, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 1;
@@ -212,14 +233,15 @@
             // 
             // txtSelectedAddress
             // 
-            this.txtSelectedAddress.Location = new System.Drawing.Point(152, 30);
+            this.txtSelectedAddress.Location = new System.Drawing.Point(138, 28);
             this.txtSelectedAddress.Name = "txtSelectedAddress";
             this.txtSelectedAddress.Size = new System.Drawing.Size(148, 20);
             this.txtSelectedAddress.TabIndex = 0;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(372, 455);
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.Location = new System.Drawing.Point(334, 450);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
@@ -229,7 +251,8 @@
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(289, 455);
+            this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCopy.Location = new System.Drawing.Point(251, 450);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 23);
             this.btnCopy.TabIndex = 3;
@@ -242,30 +265,11 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "This is the tooltip title";
             // 
-            // chkDistinctValues
-            // 
-            this.chkDistinctValues.AutoSize = true;
-            this.chkDistinctValues.Location = new System.Drawing.Point(165, 98);
-            this.chkDistinctValues.Name = "chkDistinctValues";
-            this.chkDistinctValues.Size = new System.Drawing.Size(96, 17);
-            this.chkDistinctValues.TabIndex = 16;
-            this.chkDistinctValues.Text = "Distinct Values";
-            this.chkDistinctValues.UseVisualStyleBackColor = true;
-            this.chkDistinctValues.CheckedChanged += new System.EventHandler(this.chkDistinctValues_CheckedChanged);
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(41, 399);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblMessage.TabIndex = 17;
-            // 
             // frmConcat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 502);
+            this.ClientSize = new System.Drawing.Size(422, 489);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox1);
