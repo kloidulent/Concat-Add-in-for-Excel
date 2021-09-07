@@ -129,11 +129,21 @@ namespace Concat_Addin
 
                 if (this.chkDistinctValues.Checked)
                 {
-                    itemsToProcess = cellValues.Distinct();
+                    if (radioSortAscending.Checked)
+                        itemsToProcess = cellValues.Distinct().OrderBy(s => s);
+                    else if (radioSortDescending.Checked)
+                        itemsToProcess = cellValues.Distinct().OrderByDescending(s => s);
+                    else
+                        itemsToProcess = cellValues.Distinct();
                 }
                 else
                 {
-                    itemsToProcess = cellValues;
+                    if (radioSortAscending.Checked)
+                        itemsToProcess = cellValues.OrderBy(s => s);
+                    else if (radioSortDescending.Checked)
+                        itemsToProcess = cellValues.OrderByDescending(s => s);
+                    else
+                        itemsToProcess = cellValues;
                 }
 
 
@@ -257,6 +267,21 @@ namespace Concat_Addin
         }
 
         private void txtSelectedAddress_TextChanged(object sender, EventArgs e)
+        {
+            PopulateOutputText();
+        }
+
+        private void radioSortNone_CheckedChanged(object sender, EventArgs e)
+        {
+            PopulateOutputText();
+        }
+
+        private void radioSortAscending_CheckedChanged(object sender, EventArgs e)
+        {
+            PopulateOutputText();
+        }
+
+        private void radioSortDescending_CheckedChanged(object sender, EventArgs e)
         {
             PopulateOutputText();
         }

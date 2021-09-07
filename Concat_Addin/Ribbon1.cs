@@ -38,7 +38,11 @@ namespace Concat_Addin
 
             frmHideColumns fm = new frmHideColumns(rng.Address);
 
+            fm.Left = 10;
+
             fm.ShowDialog();
+
+            
 
             
 
