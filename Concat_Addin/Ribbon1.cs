@@ -36,9 +36,11 @@ namespace Concat_Addin
             Excel.Range rng = Globals.ThisAddIn.Application.ActiveCell.CurrentRegion;
 
 
+            
+
             frmHideColumns fm = new frmHideColumns(rng.Address);
 
-            fm.Left = 10;
+            
 
             fm.ShowDialog();
 

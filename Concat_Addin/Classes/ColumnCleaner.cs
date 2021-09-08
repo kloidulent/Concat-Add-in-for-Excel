@@ -51,17 +51,19 @@ namespace Concat_Addin
                 for (int row = 2; row < cells.GetLength(0); row++)
                 {
                     // a cell is considered blank if it's NULL, "" or " ".  
+                    if (cells[row,col]!=null)
+                    {
+                        string s = cells[row, col].ToString();
 
-                    if (cells[row, col] != null)
-
-                        if (cells[row, col].ToString() != " " & cells[row, col].ToString().Length > 0)
-                        {
-                            if (TreatZeroesAsBlanks & cells[row, col].ToString() != "0")
+                        if (s.Length > 0 && s!=" ")      
+                            if ((TreatZeroesAsBlanks && s!="0") || (TreatZeroesAsBlanks==false)) 
                             {
                                 columnIsBlank = false;
                                 break;
                             }
-                        }
+                               
+
+                    }
 
                 }
 
