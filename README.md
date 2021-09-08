@@ -7,9 +7,10 @@ This is a simple VSTO Excel add-in that allows data in a range to be concatenate
 * Concatenate strings together with any character (defaults to comma)
 * Transform text to upper or lower case
 
-The add-in is very fast and can easily handle 10s or even 100s of thousands of values.
+The add-in is fast and can easily handle tens of thousands of values.  It has been tested on ranges containing 200,000 values.
 
-![image](https://user-images.githubusercontent.com/10345958/132116101-0174b8c0-779b-4f39-bde7-2469e9ab67f9.png)
+![image](https://user-images.githubusercontent.com/10345958/132425628-da33c158-0b25-4d7c-a1ce-5e8dca82f5ef.png)
 
-![image](https://user-images.githubusercontent.com/10345958/132116108-e28aa798-2630-4a6a-9832-77653db702b6.png)
+![image](https://user-images.githubusercontent.com/10345958/132425706-ed57a58e-b3ac-44e5-9428-a76998409287.png)
+
 
