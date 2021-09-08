@@ -1,11 +1,13 @@
 # Concat_Addin
 
-This is a simple VSTO Excel add-in that allows data in a range to be concatenated.  Some useful features of the add-in are:
+This is a simple VSTO Excel add-in that allows data in a range to be concatenated.  The add-in can do the following:
 
-* Wrap text in apostrophes or any other user specified character e.g. Banana,Apple becomes 'Apple','Banana'.   This is useful when that data is to be used in a SQL statement.
+* Wrap text in apostrophes or any other user specified character e.g. Banana,Apple becomes 'Apple','Banana'.   This is useful when that data is to be used in a SQL statement, for exmample
 * Eliminate duplicate values
 * Concatenate strings together with any character (defaults to comma)
 * Transform text to upper or lower case
+* Sort ascending or descending
+* Apply line feed characters after each item so that each item appears on its own row
 
 The add-in is fast and can easily handle tens of thousands of values.  It has been tested on ranges containing 200,000 values.
 
