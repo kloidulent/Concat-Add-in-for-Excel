@@ -1,4 +1,4 @@
-# Concat_Addin
+# Concat Add-in for Excel
 
 This is a simple VSTO Excel add-in that allows data in a range to be concatenated.  The add-in can do the following:
 
