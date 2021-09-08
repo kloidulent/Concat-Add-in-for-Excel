@@ -13,6 +13,15 @@ namespace Concat_Addin.Forms
     public partial class frmHideColumns : Form
     {
 
+        private int _columnsHiddenCount = 0;
+
+        public int ColumnsHiddenCount
+        {
+            get => _columnsHiddenCount;
+
+            set => _columnsHiddenCount = value;
+        }
+
 
         public frmHideColumns(string InitialSelection)
         {
@@ -44,6 +53,8 @@ namespace Concat_Addin.Forms
 
             if (txtSelectedAddress.Text.Length > 0)
                 ColumnCleaner.CleanColumns(this.txtSelectedAddress.Text,  chkTreatZerosAsBlank.Checked);
+
+            this.Close();
 
         }
 
