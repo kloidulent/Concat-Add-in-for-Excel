@@ -11,8 +11,9 @@ This is a simple VSTO Excel add-in that allows data in a range to be concatenate
 
 The add-in is fast and can easily handle tens of thousands of values.  It has been tested on ranges containing 200,000 values.
 
-![image](https://user-images.githubusercontent.com/10345958/132425628-da33c158-0b25-4d7c-a1ce-5e8dca82f5ef.png)
+![image](https://user-images.githubusercontent.com/10345958/132937674-da86c320-15d0-440f-ae44-82275858aef1.png)
 
-![image](https://user-images.githubusercontent.com/10345958/132425706-ed57a58e-b3ac-44e5-9428-a76998409287.png)
+![image](https://user-images.githubusercontent.com/10345958/132937696-1c32d716-0259-40e7-8560-29723e025295.png)
+
 
 
