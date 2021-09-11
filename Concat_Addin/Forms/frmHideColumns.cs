@@ -62,5 +62,10 @@ namespace Concat_Addin.Forms
         {
             this.Hide();
         }
+
+        private void frmHideColumns_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

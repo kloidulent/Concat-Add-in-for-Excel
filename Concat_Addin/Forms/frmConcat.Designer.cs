@@ -30,13 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioTextTransformToLower = new System.Windows.Forms.RadioButton();
+            this.radioTextTransformNone = new System.Windows.Forms.RadioButton();
+            this.radioTextTransformToUpper = new System.Windows.Forms.RadioButton();
+            this.radioSortAscending = new System.Windows.Forms.RadioButton();
+            this.radioSortDescending = new System.Windows.Forms.RadioButton();
+            this.radioSortNone = new System.Windows.Forms.RadioButton();
             this.lblMessage = new System.Windows.Forms.Label();
             this.chkDistinctValues = new System.Windows.Forms.CheckBox();
             this.chkCRAfterEachItem = new System.Windows.Forms.CheckBox();
             this.richTextResults = new System.Windows.Forms.RichTextBox();
-            this.radioTextTransformToLower = new System.Windows.Forms.RadioButton();
-            this.radioTextTransformToUpper = new System.Windows.Forms.RadioButton();
-            this.radioTextTransformNone = new System.Windows.Forms.RadioButton();
             this.btnSelectRange = new System.Windows.Forms.Button();
             this.txtDelimiter = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,53 +51,124 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.radioSortNone = new System.Windows.Forms.RadioButton();
-            this.radioSortAscending = new System.Windows.Forms.RadioButton();
-            this.radioSortDescending = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.lblMessage);
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.chkDistinctValues);
             this.groupBox1.Controls.Add(this.chkCRAfterEachItem);
-            this.groupBox1.Controls.Add(this.richTextResults);
             this.groupBox1.Controls.Add(this.btnSelectRange);
             this.groupBox1.Controls.Add(this.txtDelimiter);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.chkAddCharacter);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtCharacter);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtSelectedAddress);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(397, 428);
+            this.groupBox1.Size = new System.Drawing.Size(400, 205);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
             // 
+            // radioTextTransformToLower
+            // 
+            this.radioTextTransformToLower.AutoSize = true;
+            this.radioTextTransformToLower.Location = new System.Drawing.Point(160, 3);
+            this.radioTextTransformToLower.Name = "radioTextTransformToLower";
+            this.radioTextTransformToLower.Size = new System.Drawing.Size(81, 17);
+            this.radioTextTransformToLower.TabIndex = 12;
+            this.radioTextTransformToLower.Text = "Lower Case";
+            this.radioTextTransformToLower.UseVisualStyleBackColor = true;
+            this.radioTextTransformToLower.CheckedChanged += new System.EventHandler(this.radioTextTransformToLower_CheckedChanged);
+            // 
+            // radioTextTransformNone
+            // 
+            this.radioTextTransformNone.AutoSize = true;
+            this.radioTextTransformNone.Checked = true;
+            this.radioTextTransformNone.Location = new System.Drawing.Point(4, 3);
+            this.radioTextTransformNone.Name = "radioTextTransformNone";
+            this.radioTextTransformNone.Size = new System.Drawing.Size(51, 17);
+            this.radioTextTransformNone.TabIndex = 10;
+            this.radioTextTransformNone.TabStop = true;
+            this.radioTextTransformNone.Text = "None";
+            this.radioTextTransformNone.UseVisualStyleBackColor = true;
+            this.radioTextTransformNone.CheckedChanged += new System.EventHandler(this.radioTextTransformNone_CheckedChanged);
+            // 
+            // radioTextTransformToUpper
+            // 
+            this.radioTextTransformToUpper.AutoSize = true;
+            this.radioTextTransformToUpper.Location = new System.Drawing.Point(67, 3);
+            this.radioTextTransformToUpper.Name = "radioTextTransformToUpper";
+            this.radioTextTransformToUpper.Size = new System.Drawing.Size(81, 17);
+            this.radioTextTransformToUpper.TabIndex = 11;
+            this.radioTextTransformToUpper.Text = "Upper Case";
+            this.radioTextTransformToUpper.UseVisualStyleBackColor = true;
+            this.radioTextTransformToUpper.CheckedChanged += new System.EventHandler(this.radioTextTransformToUpper_CheckedChanged);
+            // 
+            // radioSortAscending
+            // 
+            this.radioSortAscending.AutoSize = true;
+            this.radioSortAscending.Location = new System.Drawing.Point(67, 3);
+            this.radioSortAscending.Name = "radioSortAscending";
+            this.radioSortAscending.Size = new System.Drawing.Size(75, 17);
+            this.radioSortAscending.TabIndex = 20;
+            this.radioSortAscending.Text = "Ascending";
+            this.radioSortAscending.UseVisualStyleBackColor = true;
+            this.radioSortAscending.CheckedChanged += new System.EventHandler(this.radioSortAscending_CheckedChanged);
+            // 
+            // radioSortDescending
+            // 
+            this.radioSortDescending.AutoSize = true;
+            this.radioSortDescending.Location = new System.Drawing.Point(160, 3);
+            this.radioSortDescending.Name = "radioSortDescending";
+            this.radioSortDescending.Size = new System.Drawing.Size(82, 17);
+            this.radioSortDescending.TabIndex = 21;
+            this.radioSortDescending.Text = "Descending";
+            this.radioSortDescending.UseVisualStyleBackColor = true;
+            this.radioSortDescending.CheckedChanged += new System.EventHandler(this.radioSortDescending_CheckedChanged);
+            // 
+            // radioSortNone
+            // 
+            this.radioSortNone.AutoSize = true;
+            this.radioSortNone.Checked = true;
+            this.radioSortNone.Location = new System.Drawing.Point(3, 3);
+            this.radioSortNone.Name = "radioSortNone";
+            this.radioSortNone.Size = new System.Drawing.Size(51, 17);
+            this.radioSortNone.TabIndex = 19;
+            this.radioSortNone.TabStop = true;
+            this.radioSortNone.Text = "None";
+            this.radioSortNone.UseVisualStyleBackColor = true;
+            this.radioSortNone.CheckedChanged += new System.EventHandler(this.radioSortNone_CheckedChanged);
+            // 
             // lblMessage
             // 
+            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(27, 397);
+            this.lblMessage.Location = new System.Drawing.Point(12, 441);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.Size = new System.Drawing.Size(49, 13);
             this.lblMessage.TabIndex = 17;
+            this.lblMessage.Text = "message";
             // 
             // chkDistinctValues
             // 
             this.chkDistinctValues.AutoSize = true;
-            this.chkDistinctValues.Location = new System.Drawing.Point(151, 96);
+            this.chkDistinctValues.Location = new System.Drawing.Point(175, 94);
             this.chkDistinctValues.Name = "chkDistinctValues";
             this.chkDistinctValues.Size = new System.Drawing.Size(96, 17);
             this.chkDistinctValues.TabIndex = 16;
@@ -105,7 +179,7 @@
             // chkCRAfterEachItem
             // 
             this.chkCRAfterEachItem.AutoSize = true;
-            this.chkCRAfterEachItem.Location = new System.Drawing.Point(25, 96);
+            this.chkCRAfterEachItem.Location = new System.Drawing.Point(19, 94);
             this.chkCRAfterEachItem.Name = "chkCRAfterEachItem";
             this.chkCRAfterEachItem.Size = new System.Drawing.Size(120, 17);
             this.chkCRAfterEachItem.TabIndex = 15;
@@ -115,50 +189,18 @@
             // 
             // richTextResults
             // 
-            this.richTextResults.Location = new System.Drawing.Point(25, 252);
+            this.richTextResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextResults.Location = new System.Drawing.Point(13, 236);
             this.richTextResults.Name = "richTextResults";
-            this.richTextResults.Size = new System.Drawing.Size(344, 137);
+            this.richTextResults.Size = new System.Drawing.Size(398, 195);
             this.richTextResults.TabIndex = 14;
             this.richTextResults.Text = "";
             // 
-            // radioTextTransformToLower
-            // 
-            this.radioTextTransformToLower.AutoSize = true;
-            this.radioTextTransformToLower.Location = new System.Drawing.Point(171, 19);
-            this.radioTextTransformToLower.Name = "radioTextTransformToLower";
-            this.radioTextTransformToLower.Size = new System.Drawing.Size(81, 17);
-            this.radioTextTransformToLower.TabIndex = 12;
-            this.radioTextTransformToLower.Text = "Lower Case";
-            this.radioTextTransformToLower.UseVisualStyleBackColor = true;
-            this.radioTextTransformToLower.CheckedChanged += new System.EventHandler(this.radioTextTransformToLower_CheckedChanged);
-            // 
-            // radioTextTransformToUpper
-            // 
-            this.radioTextTransformToUpper.AutoSize = true;
-            this.radioTextTransformToUpper.Location = new System.Drawing.Point(82, 19);
-            this.radioTextTransformToUpper.Name = "radioTextTransformToUpper";
-            this.radioTextTransformToUpper.Size = new System.Drawing.Size(81, 17);
-            this.radioTextTransformToUpper.TabIndex = 11;
-            this.radioTextTransformToUpper.Text = "Upper Case";
-            this.radioTextTransformToUpper.UseVisualStyleBackColor = true;
-            this.radioTextTransformToUpper.CheckedChanged += new System.EventHandler(this.radioTextTransformToUpper_CheckedChanged);
-            // 
-            // radioTextTransformNone
-            // 
-            this.radioTextTransformNone.AutoSize = true;
-            this.radioTextTransformNone.Checked = true;
-            this.radioTextTransformNone.Location = new System.Drawing.Point(23, 19);
-            this.radioTextTransformNone.Name = "radioTextTransformNone";
-            this.radioTextTransformNone.Size = new System.Drawing.Size(51, 17);
-            this.radioTextTransformNone.TabIndex = 10;
-            this.radioTextTransformNone.TabStop = true;
-            this.radioTextTransformNone.Text = "None";
-            this.radioTextTransformNone.UseVisualStyleBackColor = true;
-            this.radioTextTransformNone.CheckedChanged += new System.EventHandler(this.radioTextTransformNone_CheckedChanged);
-            // 
             // btnSelectRange
             // 
-            this.btnSelectRange.Location = new System.Drawing.Point(292, 26);
+            this.btnSelectRange.Location = new System.Drawing.Point(286, 24);
             this.btnSelectRange.Name = "btnSelectRange";
             this.btnSelectRange.Size = new System.Drawing.Size(27, 23);
             this.btnSelectRange.TabIndex = 9;
@@ -168,9 +210,9 @@
             // 
             // txtDelimiter
             // 
-            this.txtDelimiter.Location = new System.Drawing.Point(265, 58);
+            this.txtDelimiter.Location = new System.Drawing.Point(247, 56);
             this.txtDelimiter.Name = "txtDelimiter";
-            this.txtDelimiter.Size = new System.Drawing.Size(56, 20);
+            this.txtDelimiter.Size = new System.Drawing.Size(44, 20);
             this.txtDelimiter.TabIndex = 8;
             this.txtDelimiter.Text = ",";
             this.txtDelimiter.TextChanged += new System.EventHandler(this.txtDelimiter_TextChanged);
@@ -178,18 +220,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 61);
+            this.label2.Location = new System.Drawing.Point(194, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Delimiter";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // chkAddCharacter
             // 
             this.chkAddCharacter.AutoSize = true;
             this.chkAddCharacter.Checked = true;
             this.chkAddCharacter.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAddCharacter.Location = new System.Drawing.Point(25, 61);
+            this.chkAddCharacter.Location = new System.Drawing.Point(19, 59);
             this.chkAddCharacter.Name = "chkAddCharacter";
             this.chkAddCharacter.Size = new System.Drawing.Size(107, 17);
             this.chkAddCharacter.TabIndex = 6;
@@ -200,18 +243,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 236);
+            this.label3.Location = new System.Drawing.Point(12, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Results";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtCharacter
             // 
-            this.txtCharacter.Location = new System.Drawing.Point(138, 58);
+            this.txtCharacter.Location = new System.Drawing.Point(132, 56);
             this.txtCharacter.MaxLength = 1;
             this.txtCharacter.Name = "txtCharacter";
-            this.txtCharacter.Size = new System.Drawing.Size(56, 20);
+            this.txtCharacter.Size = new System.Drawing.Size(34, 20);
             this.txtCharacter.TabIndex = 3;
             this.txtCharacter.Text = "\'";
             this.txtCharacter.TextChanged += new System.EventHandler(this.txtCharacter_TextChanged);
@@ -219,7 +263,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 31);
+            this.label1.Location = new System.Drawing.Point(16, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 1;
@@ -227,7 +271,7 @@
             // 
             // txtSelectedAddress
             // 
-            this.txtSelectedAddress.Location = new System.Drawing.Point(138, 28);
+            this.txtSelectedAddress.Location = new System.Drawing.Point(132, 26);
             this.txtSelectedAddress.Name = "txtSelectedAddress";
             this.txtSelectedAddress.Size = new System.Drawing.Size(148, 20);
             this.txtSelectedAddress.TabIndex = 0;
@@ -236,7 +280,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(334, 450);
+            this.btnCancel.Location = new System.Drawing.Point(338, 441);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
@@ -247,7 +291,7 @@
             // btnCopy
             // 
             this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopy.Location = new System.Drawing.Point(251, 450);
+            this.btnCopy.Location = new System.Drawing.Point(255, 441);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 23);
             this.btnCopy.TabIndex = 3;
@@ -260,85 +304,68 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "This is the tooltip title";
             // 
-            // radioSortNone
+            // panel1
             // 
-            this.radioSortNone.AutoSize = true;
-            this.radioSortNone.Checked = true;
-            this.radioSortNone.Location = new System.Drawing.Point(14, 19);
-            this.radioSortNone.Name = "radioSortNone";
-            this.radioSortNone.Size = new System.Drawing.Size(51, 17);
-            this.radioSortNone.TabIndex = 19;
-            this.radioSortNone.TabStop = true;
-            this.radioSortNone.Text = "None";
-            this.radioSortNone.UseVisualStyleBackColor = true;
-            this.radioSortNone.CheckedChanged += new System.EventHandler(this.radioSortNone_CheckedChanged);
+            this.panel1.Controls.Add(this.radioTextTransformToLower);
+            this.panel1.Controls.Add(this.radioTextTransformNone);
+            this.panel1.Controls.Add(this.radioTextTransformToUpper);
+            this.panel1.Location = new System.Drawing.Point(121, 132);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(254, 33);
+            this.panel1.TabIndex = 24;
             // 
-            // radioSortAscending
+            // label4
             // 
-            this.radioSortAscending.AutoSize = true;
-            this.radioSortAscending.Location = new System.Drawing.Point(73, 19);
-            this.radioSortAscending.Name = "radioSortAscending";
-            this.radioSortAscending.Size = new System.Drawing.Size(75, 17);
-            this.radioSortAscending.TabIndex = 20;
-            this.radioSortAscending.Text = "Ascending";
-            this.radioSortAscending.UseVisualStyleBackColor = true;
-            this.radioSortAscending.CheckedChanged += new System.EventHandler(this.radioSortAscending_CheckedChanged);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 132);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 13);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Text Tranformation";
             // 
-            // radioSortDescending
+            // label5
             // 
-            this.radioSortDescending.AutoSize = true;
-            this.radioSortDescending.Location = new System.Drawing.Point(170, 19);
-            this.radioSortDescending.Name = "radioSortDescending";
-            this.radioSortDescending.Size = new System.Drawing.Size(82, 17);
-            this.radioSortDescending.TabIndex = 21;
-            this.radioSortDescending.Text = "Descending";
-            this.radioSortDescending.UseVisualStyleBackColor = true;
-            this.radioSortDescending.CheckedChanged += new System.EventHandler(this.radioSortDescending_CheckedChanged);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 162);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Sorting";
             // 
-            // groupBox2
+            // panel2
             // 
-            this.groupBox2.Controls.Add(this.radioSortAscending);
-            this.groupBox2.Controls.Add(this.radioSortDescending);
-            this.groupBox2.Controls.Add(this.radioSortNone);
-            this.groupBox2.Location = new System.Drawing.Point(25, 176);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(265, 48);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Sort Options";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radioTextTransformToLower);
-            this.groupBox3.Controls.Add(this.radioTextTransformNone);
-            this.groupBox3.Controls.Add(this.radioTextTransformToUpper);
-            this.groupBox3.Location = new System.Drawing.Point(25, 123);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(265, 47);
-            this.groupBox3.TabIndex = 23;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Text Transformation";
+            this.panel2.Controls.Add(this.radioSortDescending);
+            this.panel2.Controls.Add(this.radioSortAscending);
+            this.panel2.Controls.Add(this.radioSortNone);
+            this.panel2.Location = new System.Drawing.Point(121, 162);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(254, 32);
+            this.panel2.TabIndex = 27;
             // 
             // frmConcat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 489);
+            this.ClientSize = new System.Drawing.Size(426, 476);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox1);
-            this.MaximizeBox = false;
+            this.Controls.Add(this.richTextResults);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.label3);
+            this.MinimumSize = new System.Drawing.Size(442, 515);
             this.Name = "frmConcat";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Concatenate Text";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -363,10 +390,12 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox chkDistinctValues;
         private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioSortAscending;
         private System.Windows.Forms.RadioButton radioSortDescending;
         private System.Windows.Forms.RadioButton radioSortNone;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
