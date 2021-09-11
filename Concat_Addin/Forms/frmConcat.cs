@@ -72,13 +72,33 @@ namespace Concat_Addin
 
                 int ItemCount;
 
+                Concat.TextTransformation transformation;
+
+                if (radioTextTransformToLower.Checked)
+                    transformation = Concat.TextTransformation.ToLowerCase;
+                else if (radioTextTransformToUpper.Checked)
+                    transformation = Concat.TextTransformation.ToUpperCase;
+                else
+                    transformation = Concat.TextTransformation.NoTransformation;
+
+
+                SortOrder order;
+
+                if (radioSortAscending.Checked)
+                    order = SortOrder.Ascending;
+                else if (radioSortDescending.Checked)
+                    order = SortOrder.Descending;
+                else
+                    order = SortOrder.None;
+
+
                 string results = Concat.ConcatenateRangeToText(selectedCells,
                                     this.txtCharacter.Text,
                                     this.txtDelimiter.Text,
                                     this.chkCRAfterEachItem.Checked,
                                     this.chkDistinctValues.Checked,
-                                    SortOrder.Ascending,
-                                    Concat.TextTransformation.NoTransformation,
+                                    order,
+                                    transformation,
                                     out ItemCount
                                     );
 

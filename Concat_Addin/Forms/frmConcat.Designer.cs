@@ -45,7 +45,6 @@
             this.btnSelectRange = new System.Windows.Forms.Button();
             this.txtDelimiter = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.chkAddCharacter = new System.Windows.Forms.CheckBox();
             this.txtCharacter = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSelectedAddress = new System.Windows.Forms.TextBox();
@@ -55,6 +54,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,6 +65,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -74,7 +75,6 @@
             this.groupBox1.Controls.Add(this.btnSelectRange);
             this.groupBox1.Controls.Add(this.txtDelimiter);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.chkAddCharacter);
             this.groupBox1.Controls.Add(this.txtCharacter);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtSelectedAddress);
@@ -157,6 +157,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(254, 33);
             this.panel1.TabIndex = 24;
+            this.toolTip1.SetToolTip(this.panel1, "Text can be converted to upper or lower case or left unaltered.");
             // 
             // radioTextTransformToLower
             // 
@@ -243,19 +244,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Delimiter";
             // 
-            // chkAddCharacter
-            // 
-            this.chkAddCharacter.AutoSize = true;
-            this.chkAddCharacter.Checked = true;
-            this.chkAddCharacter.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAddCharacter.Location = new System.Drawing.Point(19, 59);
-            this.chkAddCharacter.Name = "chkAddCharacter";
-            this.chkAddCharacter.Size = new System.Drawing.Size(107, 17);
-            this.chkAddCharacter.TabIndex = 6;
-            this.chkAddCharacter.Text = "Wrap Character?";
-            this.chkAddCharacter.UseVisualStyleBackColor = true;
-            this.chkAddCharacter.CheckedChanged += new System.EventHandler(this.chkAddCharacter_CheckedChanged);
-            // 
             // txtCharacter
             // 
             this.txtCharacter.Location = new System.Drawing.Point(132, 56);
@@ -340,6 +328,15 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "This is the tooltip title";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Wrap Character";
+            // 
             // frmConcat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,7 +372,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSelectedAddress;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.CheckBox chkAddCharacter;
         private System.Windows.Forms.TextBox txtDelimiter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSelectRange;
@@ -395,5 +391,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }
