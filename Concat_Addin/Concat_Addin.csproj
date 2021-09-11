@@ -157,6 +157,7 @@
   -->
   <ItemGroup>
     <Compile Include="Classes\ColumnCleaner.cs" />
+    <Compile Include="Classes\Concat.cs" />
     <Compile Include="Forms\frmConcat.cs">
       <SubType>Form</SubType>
     </Compile>
