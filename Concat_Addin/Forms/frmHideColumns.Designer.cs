@@ -118,6 +118,7 @@
             this.Name = "frmHideColumns";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hide Columns";
+            this.Load += new System.EventHandler(this.frmHideColumns_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

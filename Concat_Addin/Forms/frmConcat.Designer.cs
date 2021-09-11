@@ -80,7 +80,7 @@
             this.groupBox1.Controls.Add(this.txtSelectedAddress);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 212);
+            this.groupBox1.Size = new System.Drawing.Size(400, 205);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
@@ -159,7 +159,7 @@
             // 
             this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(12, 428);
+            this.lblMessage.Location = new System.Drawing.Point(12, 441);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(49, 13);
             this.lblMessage.TabIndex = 17;
@@ -192,9 +192,9 @@
             this.richTextResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextResults.Location = new System.Drawing.Point(13, 252);
+            this.richTextResults.Location = new System.Drawing.Point(13, 236);
             this.richTextResults.Name = "richTextResults";
-            this.richTextResults.Size = new System.Drawing.Size(398, 163);
+            this.richTextResults.Size = new System.Drawing.Size(398, 195);
             this.richTextResults.TabIndex = 14;
             this.richTextResults.Text = "";
             // 
@@ -243,7 +243,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 236);
+            this.label3.Location = new System.Drawing.Point(12, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 5;
@@ -353,7 +353,6 @@
             this.Controls.Add(this.richTextResults);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.label3);
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(442, 515);
             this.Name = "frmConcat";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
