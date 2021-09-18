@@ -177,6 +177,12 @@
     <Compile Include="Forms\frmIonito.Designer.cs">
       <DependentUpon>frmIonito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MyUserControl.Designer.cs">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHideColumns.resx">
       <DependentUpon>frmHideColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyUserControl.resx">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

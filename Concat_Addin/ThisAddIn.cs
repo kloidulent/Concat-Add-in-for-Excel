@@ -11,6 +11,10 @@ namespace Concat_Addin
 {
     public partial class ThisAddIn
     {
+
+        private MyUserControl myUserControl1;
+        private Microsoft.Office.Tools.CustomTaskPane myCustomTaskPane;
+        
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
 
@@ -19,8 +23,42 @@ namespace Concat_Addin
 
             Globals.ThisAddIn.Application.WorkbookNewSheet += Application_WorkbookNewSheet;
 
-            
+            Globals.ThisAddIn.Application.SheetSelectionChange += Application_SheetSelectionChange;
 
+
+
+            myUserControl1 = new MyUserControl();
+            myCustomTaskPane = this.CustomTaskPanes.Add(myUserControl1, "My Task Pane");
+
+            myCustomTaskPane.DockPositionChanged += MyCustomTaskPane_DockPositionChanged;
+
+            myCustomTaskPane.Control.SizeChanged += Control_SizeChanged;
+
+            myCustomTaskPane.Control.DoubleClick += Control_DoubleClick;
+
+            myCustomTaskPane.Visible = true;
+
+        }
+
+        private void Application_SheetSelectionChange(object Sh, Excel.Range Target)
+        {
+            myUserControl1.TaskPaneCurrentCell = Target.Address;
+        }
+
+        private void Control_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Control_SizeChanged(object sender, EventArgs e)
+        {
+            myUserControl1.TaskPaneTitle = myCustomTaskPane.Width.ToString();
+        }
+
+        private void MyCustomTaskPane_DockPositionChanged(object sender, EventArgs e)
+        {
+
+            
 
         }
 
